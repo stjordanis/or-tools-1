@@ -12,6 +12,10 @@ inc, lib = dir_config("or-tools")
 inc ||= "/usr/local/include"
 lib ||= "/usr/local/lib"
 
+puts inc
+puts lib
+puts Dir.pwd
+
 $INCFLAGS << " -I#{inc}"
 
 $LDFLAGS << " -Wl,-rpath,#{lib}"
