@@ -8,13 +8,15 @@ $CXXFLAGS << " -std=c++11 -DUSE_CBC"
 $CXXFLAGS << " -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-ignored-qualifiers"
 
 inc, lib = dir_config("or-tools")
+p Dir.pwd
+p inc
+p lib
 
 inc ||= "/usr/local/include"
 lib ||= "/usr/local/lib"
 
-puts inc
-puts lib
-puts Dir.pwd
+p ENV["BUILD_DIR"]
+pp ENV
 
 $INCFLAGS << " -I#{inc}"
 
