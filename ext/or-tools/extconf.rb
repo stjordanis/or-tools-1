@@ -11,6 +11,10 @@ inc, lib = dir_config("or-tools")
 p Dir.pwd
 p inc
 p lib
+puts "/app"
+pp Dir["/app/**/*"]
+puts "/tmp"
+pp Dir["/tmp/**/*"]
 
 inc ||= "/usr/local/include"
 lib ||= "/usr/local/lib"
